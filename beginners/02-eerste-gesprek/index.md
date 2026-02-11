@@ -15,11 +15,17 @@ claude
 
 ### Een eerdere sessie hervatten
 
-Wil je verder waar je gebleven was? Gebruik `-c` om de laatste conversatie te hervatten:
+Wil je verder waar je gebleven was? Er zijn meerdere manieren:
 
 ```bash
+# Hervat de laatste sessie in deze map
 claude -c
+
+# Hervat een specifieke sessie met het session ID
+claude --resume 10627a9b-2166-4019-91c9-80f5bf596bfe
 ```
+
+> **Wanneer heb je dit nodig?** Als je `Ctrl+C` drukt (of je terminal sluit), toont Claude Code een session ID. Bewaar dit! Je kunt die sessie later hervatten — zelfs dagen later. Met `-c` pak je automatisch de laatste sessie in de huidige map. Als je meerdere sessies hebt gehad, gebruik dan `--resume` met het specifieke ID.
 
 ## Basis commando's
 
@@ -87,6 +93,16 @@ Schrijf nog geen code.
 In Plan Mode kan Claude Code wel bestanden lezen en doorzoeken, maar maakt het geen wijzigingen. Zodra je het plan goedkeurt, kan het aan de slag.
 
 > **Tip**: Plan Mode is een van de krachtigste features. Gebruik het bij elke taak die meer dan een paar regels code betreft.
+
+### Plan als veiligheidsnet
+
+Een plan heeft nog een groot voordeel: **het helpt je om later verder te gaan**. Als je sessie onderbroken wordt (door een rate limit, een crash, of gewoon omdat je stopt), kun je in een nieuwe sessie zeggen:
+
+```
+Ga verder met het plan. We waren bij stap 3.
+```
+
+Claude Code leest dan het plan (als het in een bestand staat of via `/compact` bewaard is) en pikt op waar je gebleven was. Dit werkt zelfs zonder de originele sessie te hervatten.
 
 ## Effectief prompts schrijven
 

@@ -194,6 +194,52 @@ totdat alle tests slagen
 
 Door Claude een verificatiestap te geven kan het autonoom itereren.
 
+## Rate limits en sessie-management
+
+### Wat als je de limiet bereikt?
+
+Als je midden in een taak zit en je usage limit bereikt, stopt Claude Code. Dit is een veelvoorkomende situatie. Zo ga je er mee om:
+
+1. **Bewaar het session ID** — als je Claude Code afsluit (met `Ctrl+C`), toont het een session ID:
+   ```
+   Resume this session with:
+   claude --resume 10627a9b-2166-4019-91c9-80f5bf596bfe
+   ```
+
+2. **Wacht tot de limiet reset** — rate limits resetten per 5-uur venster
+
+3. **Hervat de sessie** — als je weer krediet hebt:
+   ```bash
+   # Hervat de laatste sessie in deze map
+   claude -c
+
+   # Of hervat een specifieke sessie met het ID
+   claude --resume 10627a9b-2166-4019-91c9-80f5bf596bfe
+   ```
+
+> **Belangrijk**: Claude Code gaat niet automatisch verder als je de sessie open laat staan. Je moet zelf actief hervatten. Gebruik `-c` voor de laatste sessie, of `--resume <id>` voor een specifieke sessie.
+
+### De plan-strategie voor lange taken
+
+De beste manier om onderbrekingen op te vangen is door **altijd eerst een plan te maken**:
+
+```
+Maak een plan met een todo-lijst voor het refactoren van de auth module.
+Sla het op in een bestand genaamd PLAN.md.
+```
+
+Waarom? Omdat je na een onderbreking in een **nieuwe sessie** simpelweg kunt zeggen:
+
+```
+Lees PLAN.md en ga verder waar we gebleven waren.
+```
+
+Dit werkt zelfs zonder de originele sessie te hervatten. Het plan fungeert als een overdachtsdocument — ook na `/compact` of in een compleet nieuwe sessie.
+
+### Meerdere sessies beheren
+
+Als je in dezelfde map meerdere sessies hebt gehad, pakt `-c` altijd de **laatste**. Bewaar session IDs als je specifieke sessies wilt hervatten. Tip: plak ze in een notitie of in je plan-bestand.
+
 ## Kosten in de gaten houden
 
 Claude Code gebruikt tokens (en dus geld) bij elke interactie. Houd dit in de gaten:
@@ -209,6 +255,7 @@ Tips om kosten te beperken:
 - Wees specifiek in je prompts (minder heen-en-weer = minder tokens)
 - Verwijs naar bestanden met `@` in plaats van "zoek het op"
 - Gebruik Plan Mode om eerst te denken, dan te doen
+- **Upgrade je plan** als je regelmatig limits bereikt
 
 ## Samenvatting van de hele training
 
