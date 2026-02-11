@@ -33,27 +33,36 @@ Dit opent een menu waar je kunt instellen welke tools Claude Code mag gebruiken 
 
 > **Tip voor beginners**: Laat de standaardinstellingen staan. Het is goed om te zien wat Claude Code doet voordat je het automatisch toestaat.
 
-## Keybindings
-
-Je kunt sneltoetsen aanpassen in `~/.claude/keybindings.json`.
-
-### Standaard sneltoetsen
+## Sneltoetsen
 
 | Toets | Actie |
 |-------|-------|
 | `Enter` | Nieuwe regel |
-| `Ctrl+Enter` of dubbele `Enter` | Bericht versturen |
-| `Escape` | Huidige actie annuleren / stoppen |
-| `Tab` | Autocomplete |
-| `Up/Down` | Door historie bladeren |
+| Dubbele `Enter` | Bericht versturen |
+| `Escape` | Claude stoppen |
+| `Escape` (2x) | Lijst van eerdere berichten tonen |
+| `Shift+Tab` (2x) | Plan Mode aan/uit |
+| `Tab` | Autocomplete bestanden en commando's |
+| `Up/Down` | Door berichthistorie bladeren |
+| `Ctrl+V` | Afbeelding plakken (niet `Cmd+V`!) |
 
-### Aanpassen
+### Terminal setup
+
+Draai dit eenmalig voor betere toetsondersteuning (Shift+Enter voor nieuwe regels):
 
 ```
-/keybindings
+/terminal-setup
 ```
 
-Of bewerk het bestand direct:
+### Vim mode
+
+Voor Vim-gebruikers:
+
+```
+/vim
+```
+
+### Keybindings aanpassen
 
 ```json
 // ~/.claude/keybindings.json
@@ -65,30 +74,62 @@ Of bewerk het bestand direct:
 ]
 ```
 
-## Handige slash-commando's
+## Alle slash-commando's
 
 | Commando | Functie |
 |----------|---------|
 | `/help` | Hulp en beschikbare commando's |
-| `/clear` | Gesprek wissen |
+| `/clear` | Gesprek wissen — **gebruik dit vaak!** |
 | `/compact` | Gesprek samenvatten om context vrij te maken |
 | `/cost` | Token- en kostengebruik bekijken |
-| `/model` | Model wijzigen (als beschikbaar) |
+| `/model` | Model wijzigen |
+| `/config` | Instellingen interactief aanpassen |
 | `/allowed-tools` | Tool permissions instellen |
-| `/mcp` | MCP server beheren |
+| `/mcp` | MCP servers beheren |
+| `/vim` | Vim-modus inschakelen |
+| `/terminal-setup` | Terminal sneltoetsen installeren |
+| `/install-github-app` | GitHub PR review automatisering |
+| `/init` | CLAUDE.md genereren voor je project |
+
+## CLI opties (buiten Claude Code)
+
+Je kunt Claude Code ook met opties starten vanuit je terminal:
+
+| Commando | Wat het doet |
+|----------|-------------|
+| `claude` | Start interactieve sessie |
+| `claude "vraag"` | Start sessie met een vraag |
+| `claude -c` | Hervat de laatste conversatie |
+| `claude -r <id>` | Hervat een specifieke sessie |
+| `claude -p "vraag"` | Stel een vraag en sluit af (print mode) |
+| `claude --model sonnet` | Gebruik een specifiek model |
+
+### Print mode voor scripts
+
+Met `-p` kun je Claude Code gebruiken in scripts en pipelines:
+
+```bash
+# Vraag uitleg over een bestand
+claude -p "Wat doet dit bestand?" < config.js
+
+# Analyseer git log
+git log --oneline -10 | claude -p "Vat deze commits samen"
+
+# Review gewijzigde bestanden
+git diff main --name-only | claude -p "Review deze bestanden op security issues"
+```
 
 ## Tips voor dagelijks gebruik
 
-### 1. Start altijd vanuit de project root
+### 1. Gebruik `/clear` bij elke nieuwe taak
 
-```bash
-cd ~/mijn-project
-claude
+```
+/clear
 ```
 
-Claude Code werkt het beste als het de volledige projectstructuur kan zien.
+Elke nieuwe taak verdient een schone context. Oude chathistorie kost tokens en kan Claude verwarren.
 
-### 2. Gebruik /compact bij lange sessies
+### 2. Gebruik `/compact` bij lange sessies
 
 Na veel heen-en-weer gaat Claude Code context verliezen. Gebruik `/compact` om het gesprek samen te vatten en context vrij te maken.
 
@@ -103,11 +144,25 @@ In src/auth/login.ts op regel 45 wordt de error niet goed afgehandeld.
 Voeg een try/catch block toe.
 ```
 
+Of gebruik `@`:
+
+```
+Fix de bug in @src/auth/login.ts op regel 45
+```
+
 ### 4. Gebruik meerdere sessies
 
 Je kunt meerdere Claude Code sessies tegelijk draaien in verschillende terminals. Handig als je aan meerdere taken werkt.
 
-### 5. Leer van Claude Code
+### 5. Commit voor je verder gaat
+
+Maak na elke werkende wijziging een commit. Dit geeft je een veiligheidsnet als Claude Code iets stuk maakt bij een volgende stap.
+
+### 6. Gebruik Plan Mode voor complexe taken
+
+Druk `Shift+Tab` (2x) in of vraag expliciet om een plan. Laat Claude eerst denken voordat het code schrijft.
+
+### 7. Leer van Claude Code
 
 Vraag niet alleen om code, maar ook om uitleg:
 
@@ -115,19 +170,29 @@ Vraag niet alleen om code, maar ook om uitleg:
 Leg uit waarom je deze aanpak hebt gekozen in plaats van een alternatief
 ```
 
-### 6. Gebruik het voor leren
+### 8. Review je code samen
 
 ```
-Ik ben nieuw met React. Leg stap voor stap uit hoe deze component werkt
-en welke patronen er gebruikt worden
-```
-
-### 7. Review je code samen
-
-```
-Bekijk src/api/routes.ts en geef feedback op de code kwaliteit.
+Bekijk @src/api/routes.ts en geef feedback op de code kwaliteit.
 Zijn er verbeterpunten?
 ```
+
+### 9. Gebruik afbeeldingen
+
+Je kunt screenshots en afbeeldingen plakken met `Ctrl+V`. Handig voor:
+
+- UI bugs: "Deze knop staat verkeerd, zie screenshot"
+- Ontwerpen: "Bouw dit ontwerp na"
+- Errors: screenshot van een foutmelding
+
+### 10. Laat Claude zichzelf verifiëren
+
+```
+Schrijf tests voor de login functie, draai ze, en fix eventuele fouten
+totdat alle tests slagen
+```
+
+Door Claude een verificatiestap te geven kan het autonoom itereren.
 
 ## Kosten in de gaten houden
 
@@ -139,10 +204,11 @@ Claude Code gebruikt tokens (en dus geld) bij elke interactie. Houd dit in de ga
 
 Tips om kosten te beperken:
 
-- Gebruik `/compact` regelmatig
+- Gebruik `/clear` bij elke nieuwe taak
+- Gebruik `/compact` regelmatig bij lange sessies
 - Wees specifiek in je prompts (minder heen-en-weer = minder tokens)
-- Verwijs naar specifieke bestanden in plaats van "zoek het op"
-- Gebruik `/clear` als je aan een heel ander onderwerp begint
+- Verwijs naar bestanden met `@` in plaats van "zoek het op"
+- Gebruik Plan Mode om eerst te denken, dan te doen
 
 ## Samenvatting van de hele training
 
@@ -152,12 +218,12 @@ Gefeliciteerd! Je hebt nu de basis van Claude Code onder de knie:
 |--------|-------------------|
 | 00 | Wat Claude Code is en wanneer je het gebruikt |
 | 01 | Installatie en authenticatie |
-| 02 | Basis prompts en commando's |
+| 02 | Basis prompts, commando's, Plan Mode en @ referenties |
 | 03 | Bestanden lezen, maken en bewerken |
-| 04 | Git workflow (commits, branches, PRs) |
-| 05 | CLAUDE.md configuratie |
+| 04 | Git workflow, commit-strategie, PRs |
+| 05 | CLAUDE.md configuratie en custom commands |
 | 06 | MCP servers voor extra functionaliteit |
-| 07 | Instellingen en dagelijkse tips |
+| 07 | Instellingen, CLI opties en dagelijkse tips |
 
 ## Volgende stappen
 
@@ -165,8 +231,9 @@ Nu je de basis kent, kun je:
 
 1. **Claude Code dagelijks gebruiken** bij je projecten
 2. **CLAUDE.md bestanden optimaliseren** voor je meest gebruikte projecten
-3. **MCP servers verkennen** voor je specifieke tools en workflows
-4. **Geavanceerde features** ontdekken zoals hooks, custom agents en plugins
+3. **Custom commands** aanmaken voor je team in `.claude/commands/`
+4. **MCP servers verkennen** voor je specifieke tools en workflows
+5. **Geavanceerde features** ontdekken zoals hooks, subagents, skills en plugins
 
 ---
 

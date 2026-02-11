@@ -13,6 +13,16 @@ tests staan in __tests__/, en we gebruiken pnpm als package manager...
 
 Met een `CLAUDE.md` weet Claude Code dit automatisch.
 
+## Snel starten met /init
+
+Claude Code kan zelf een `CLAUDE.md` genereren door je project te scannen:
+
+```
+/init
+```
+
+Dit analyseert je codebase en maakt een startversie aan. Je kunt die daarna handmatig aanpassen en verfijnen.
+
 ## Waar komt CLAUDE.md?
 
 Er zijn drie niveaus:
@@ -116,13 +126,37 @@ Webapplicatie voor het beheren en delen van recepten.
 - `src/lib/utils/` — helper functies
 ```
 
+## Custom Slash Commands
+
+Naast `CLAUDE.md` kun je ook herbruikbare commando's maken. Maak markdown-bestanden aan in `.claude/commands/`:
+
+```
+.claude/commands/review.md
+.claude/commands/test.md
+.claude/commands/deploy.md
+```
+
+Voorbeeld `.claude/commands/review.md`:
+
+```markdown
+Bekijk de wijzigingen in de huidige branch ten opzichte van main.
+Geef feedback op:
+- Code kwaliteit en leesbaarheid
+- Mogelijke bugs
+- Ontbrekende tests
+- Security issues
+```
+
+Dit kun je dan aanroepen met `/review` in Claude Code.
+
 ## Tips
 
-1. **Houd het beknopt** — Claude Code leest het elke sessie, dus maak het niet te lang
-2. **Wees specifiek** — "gebruik TypeScript" is beter dan "schrijf goede code"
-3. **Update regelmatig** — als je project verandert, update CLAUDE.md mee
-4. **Deel met je team** — commit de project CLAUDE.md in Git zodat iedereen dezelfde instructies heeft
-5. **Test het** — start Claude Code en vraag "Wat weet je over dit project?" om te verifiëren
+1. **Begin minimaal** — start met weinig regels en voeg toe als je merkt dat je iets steeds opnieuw moet uitleggen
+2. **Houd het beknopt** — Claude Code leest het elke sessie, dus maak het niet te lang
+3. **Wees specifiek** — "gebruik TypeScript" is beter dan "schrijf goede code"
+4. **Update regelmatig** — als je project verandert, update CLAUDE.md mee
+5. **Deel met je team** — commit de project CLAUDE.md in Git zodat iedereen dezelfde instructies heeft
+6. **Test het** — start Claude Code en vraag "Wat weet je over dit project?" om te controleren
 
 ---
 

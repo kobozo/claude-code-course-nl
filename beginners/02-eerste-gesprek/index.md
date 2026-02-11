@@ -13,6 +13,14 @@ claude
 
 > **Belangrijk**: Start Claude Code altijd vanuit de root van je project. Zo heeft het toegang tot al je bestanden en begrijpt het de structuur van je project.
 
+### Een eerdere sessie hervatten
+
+Wil je verder waar je gebleven was? Gebruik `-c` om de laatste conversatie te hervatten:
+
+```bash
+claude -c
+```
+
 ## Basis commando's
 
 Claude Code heeft ingebouwde commando's die beginnen met `/`:
@@ -23,6 +31,8 @@ Claude Code heeft ingebouwde commando's die beginnen met `/`:
 | `/clear` | Wist de huidige conversatie |
 | `/compact` | Comprimeert de conversatie om context vrij te maken |
 | `/cost` | Toont hoeveel tokens/geld je hebt gebruikt |
+| `/model` | Wissel van AI model |
+| `/config` | Instellingen aanpassen |
 | `/quit` of `Ctrl+C` | Sluit Claude Code af |
 
 ### Probeer het uit
@@ -34,6 +44,49 @@ Start Claude Code en typ:
 ```
 
 Je ziet nu een overzicht van alle beschikbare commando's.
+
+## Verwijzen naar bestanden met @
+
+Je kunt bestanden direct refereren met `@`:
+
+```
+Bekijk @src/utils.js en leg uit wat de calculateTotal functie doet
+```
+
+Dit werkt ook met mappen en glob-patronen:
+
+```
+Bekijk @src/components/ en geef een overzicht van alle componenten
+```
+
+```
+Zoek in @src/**/*.test.js naar tests die falen
+```
+
+## Shell commando's draaien met !
+
+Je kunt snel een terminal commando draaien door het te prefixen met `!`:
+
+```
+!npm test
+```
+
+Dit draait het commando direct zonder dat Claude het interpreteert.
+
+## Plan Mode
+
+Bij complexe taken is het slim om Claude Code eerst een **plan** te laten maken voordat het code gaat schrijven. Dit voorkomt dat het direct de verkeerde richting op gaat.
+
+Activeer Plan Mode met **`Shift+Tab`** (twee keer drukken). Je kunt ook gewoon vragen:
+
+```
+Maak eerst een plan voor het toevoegen van een login pagina.
+Schrijf nog geen code.
+```
+
+In Plan Mode kan Claude Code wel bestanden lezen en doorzoeken, maar maakt het geen wijzigingen. Zodra je het plan goedkeurt, kan het aan de slag.
+
+> **Tip**: Plan Mode is een van de krachtigste features. Gebruik het bij elke taak die meer dan een paar regels code betreft.
 
 ## Effectief prompts schrijven
 
@@ -85,6 +138,15 @@ Maak een basis Express server aan met een GET /products endpoint
 die een hardcoded lijst van producten returnt als JSON
 ```
 
+### 5. Geef Claude een manier om te verifiëren
+
+```
+Schrijf unit tests voor de calculateTotal functie, draai ze,
+en fix eventuele fouten totdat alle tests slagen
+```
+
+Door Claude Code een testloop te geven, kan het zelfstandig itereren tot het resultaat correct is.
+
 ## Hoe Claude Code antwoordt
 
 Claude Code kan meerdere dingen doen in een antwoord:
@@ -105,17 +167,33 @@ Voordat Claude Code een actie uitvoert (bestand bewerken, commando draaien), vra
 | Toets | Actie |
 |-------|-------|
 | `Enter` | Nieuwe regel in je bericht |
-| `Ctrl+Enter` of dubbele `Enter` | Bericht versturen |
-| `Escape` | Huidige actie annuleren |
+| Dubbele `Enter` | Bericht versturen |
+| `Escape` | Claude stoppen (niet `Ctrl+C`!) |
+| `Escape` (2x) | Lijst van eerdere berichten tonen |
+| `Shift+Tab` (2x) | Plan Mode aan/uit |
 | `Tab` | Autocomplete |
+| `Up/Down` | Door berichthistorie bladeren |
+
+> **Let op**: Gebruik `Escape` om Claude te stoppen, niet `Ctrl+C`. `Ctrl+C` sluit Claude Code helemaal af.
+
+### Terminal setup voor betere invoer
+
+Draai dit eenmalig voor betere ondersteuning van `Shift+Enter` als nieuwe regel:
+
+```
+/terminal-setup
+```
 
 ## Tips voor beginners
 
 1. **Begin klein** — vraag eerst simpele dingen voordat je complexe taken geeft
 2. **Lees wat Claude doet** — bekijk altijd de voorgestelde wijzigingen voor je ze accepteert
-3. **Stel vervolgvragen** — als het antwoord niet helemaal klopt, vraag om aanpassingen
-4. **Gebruik `/clear`** — als het gesprek te lang wordt, begin opnieuw met een schone lei
-5. **Verwijs naar bestanden** — noem bestandsnamen en regelnummers voor precieze instructies
+3. **Commit vaak** — maak een git commit na elke werkende wijziging, zo kun je altijd terug
+4. **Gebruik Plan Mode** — laat Claude eerst denken voordat het code schrijft
+5. **Gebruik `/clear` vaak** — elke nieuwe taak verdient een schone context
+6. **Verwijs naar bestanden** — gebruik `@bestandsnaam` voor precieze verwijzingen
+7. **Stel vervolgvragen** — als het antwoord niet helemaal klopt, vraag om aanpassingen
+8. **Vraag om uitleg** — leer van Claude door te vragen *waarom* het iets zo doet
 
 ---
 
