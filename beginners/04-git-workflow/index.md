@@ -121,4 +121,4 @@ Je kunt Claude Code vragen deze conventie te volgen:
 
 **Oefening**: [Oefening 1: Commit maken →](./oefeningen/oefening-1.md)
 
-**Volgende module**: [CLAUDE.md →](../05-claude-md/README.md)
+**Volgende module**: [CLAUDE.md →](../05-claude-md/index.md)

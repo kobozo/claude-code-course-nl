@@ -121,4 +121,4 @@ Voordat Claude Code een actie uitvoert (bestand bewerken, commando draaien), vra
 
 **Volgende stap**: [Oefening 1 →](./oefeningen/oefening-1.md)
 
-**Volgende module**: [Bestanden →](../03-bestanden/README.md)
+**Volgende module**: [Bestanden →](../03-bestanden/index.md)

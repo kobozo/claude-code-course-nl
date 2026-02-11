@@ -128,4 +128,4 @@ Webapplicatie voor het beheren en delen van recepten.
 
 **Oefening**: [Oefening 1: Eigen CLAUDE.md schrijven →](./oefeningen/oefening-1.md)
 
-**Volgende module**: [MCP Servers →](../06-mcp-servers/README.md)
+**Volgende module**: [MCP Servers →](../06-mcp-servers/index.md)

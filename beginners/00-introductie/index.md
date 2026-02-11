@@ -63,4 +63,4 @@ Voordat je begint, zorg dat je het volgende hebt:
 
 ---
 
-**Volgende module**: [Installatie →](../01-installatie/README.md)
+**Volgende module**: [Installatie →](../01-installatie/index.md)

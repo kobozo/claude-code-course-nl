@@ -129,4 +129,4 @@ Je kunt alle officiele servers vinden op [github.com/modelcontextprotocol/server
 
 **Oefening**: [Oefening 1: MCP server toevoegen →](./oefeningen/oefening-1.md)
 
-**Volgende module**: [Instellingen →](../07-instellingen/README.md)
+**Volgende module**: [Instellingen →](../07-instellingen/index.md)

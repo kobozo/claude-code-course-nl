@@ -148,4 +148,4 @@ Na deze module heb je:
 
 ---
 
-**Volgende module**: [Eerste Gesprek →](../02-eerste-gesprek/README.md)
+**Volgende module**: [Eerste Gesprek →](../02-eerste-gesprek/index.md)

@@ -170,4 +170,4 @@ Nu je de basis kent, kun je:
 
 ---
 
-**Terug naar**: [Cursusoverzicht →](../README.md)
+**Terug naar**: [Cursusoverzicht →](../index.md)

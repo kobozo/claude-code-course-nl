@@ -100,4 +100,4 @@ Claude Code vraagt toestemming voordat het bestanden aanpast, maar het is goed o
 - [Oefening 1: Bug fixen →](./oefeningen/oefening-1.md)
 - [Oefening 2: Nieuw bestand maken →](./oefeningen/oefening-2.md)
 
-**Volgende module**: [Git Workflow →](../04-git-workflow/README.md)
+**Volgende module**: [Git Workflow →](../04-git-workflow/index.md)
