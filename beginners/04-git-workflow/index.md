@@ -13,17 +13,17 @@ Claude Code integreert naadloos met Git. Je kunt commits maken, branches beheren
 ### Status bekijken
 
 ```
-> Wat is de git status van dit project?
+Wat is de git status van dit project?
 ```
 
 ```
-> Welke bestanden zijn gewijzigd?
+Welke bestanden zijn gewijzigd?
 ```
 
 ### Commits maken
 
 ```
-> Commit de huidige wijzigingen met een goede commit message
+Commit de huidige wijzigingen met een goede commit message
 ```
 
 Claude Code zal:
@@ -34,21 +34,21 @@ Claude Code zal:
 Je kunt ook specifiek zijn:
 
 ```
-> Commit alleen de wijzigingen in src/utils.js
+Commit alleen de wijzigingen in src/utils.js
 ```
 
 ```
-> Commit met de message "fix: validatie bug in e-mail check opgelost"
+Commit met de message "fix: validatie bug in e-mail check opgelost"
 ```
 
 ### Wijzigingen bekijken
 
 ```
-> Toon de diff van mijn laatste wijzigingen
+Toon de diff van mijn laatste wijzigingen
 ```
 
 ```
-> Wat heb ik veranderd in auth.js ten opzichte van de vorige commit?
+Wat heb ik veranderd in auth.js ten opzichte van de vorige commit?
 ```
 
 ## Werken met branches
@@ -56,19 +56,19 @@ Je kunt ook specifiek zijn:
 ### Branch aanmaken
 
 ```
-> Maak een nieuwe branch genaamd feature/login-pagina
+Maak een nieuwe branch genaamd feature/login-pagina
 ```
 
 ### Branch wisselen
 
 ```
-> Switch naar de main branch
+Switch naar de main branch
 ```
 
 ### Branches bekijken
 
 ```
-> Welke branches bestaan er en op welke zit ik nu?
+Welke branches bestaan er en op welke zit ik nu?
 ```
 
 ## Pull Requests
@@ -76,7 +76,7 @@ Je kunt ook specifiek zijn:
 Als je project op GitHub staat, kan Claude Code ook PRs aanmaken:
 
 ```
-> Maak een pull request aan voor de huidige branch naar main
+Maak een pull request aan voor de huidige branch naar main
 ```
 
 Claude Code gebruikt de `gh` CLI tool hiervoor. Als die niet geinstalleerd is, helpt het je met de installatie.
@@ -84,11 +84,11 @@ Claude Code gebruikt de `gh` CLI tool hiervoor. Als die niet geinstalleerd is, h
 ## Git log bekijken
 
 ```
-> Toon de laatste 5 commits
+Toon de laatste 5 commits
 ```
 
 ```
-> Wat is er veranderd in de laatste commit?
+Wat is er veranderd in de laatste commit?
 ```
 
 ## Tips
@@ -114,7 +114,7 @@ Een veelgebruikte conventie voor commit messages:
 Je kunt Claude Code vragen deze conventie te volgen:
 
 ```
-> Commit met een conventional commit message
+Commit met een conventional commit message
 ```
 
 ---

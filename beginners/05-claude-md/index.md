@@ -7,8 +7,8 @@
 Zonder `CLAUDE.md` moet je elke sessie opnieuw context geven:
 
 ```
-> Dit project gebruikt TypeScript, we volgen de Airbnb style guide,
-> tests staan in __tests__/, en we gebruiken pnpm als package manager...
+Dit project gebruikt TypeScript, we volgen de Airbnb style guide,
+tests staan in __tests__/, en we gebruiken pnpm als package manager...
 ```
 
 Met een `CLAUDE.md` weet Claude Code dit automatisch.

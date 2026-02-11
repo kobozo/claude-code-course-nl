@@ -23,8 +23,8 @@ Leer hoe je Git commits maakt via Claude Code.
 ### Stap 1: Een bestand laten maken
 
 ```
-> Maak een bestand index.js aan met een simpele "Hello World" Express server
-> die luistert op poort 3000
+Maak een bestand index.js aan met een simpele "Hello World" Express server
+die luistert op poort 3000
 ```
 
 Accepteer het bestand.
@@ -32,7 +32,7 @@ Accepteer het bestand.
 ### Stap 2: Eerste commit
 
 ```
-> Commit dit bestand met een goede commit message
+Commit dit bestand met een goede commit message
 ```
 
 **Let op**:
@@ -43,25 +43,25 @@ Accepteer het bestand.
 ### Stap 3: Een wijziging maken
 
 ```
-> Voeg een GET /health endpoint toe aan index.js dat { status: "ok" } returnt
+Voeg een GET /health endpoint toe aan index.js dat { status: "ok" } returnt
 ```
 
 ### Stap 4: Bekijk de diff
 
 ```
-> Toon wat er veranderd is sinds de laatste commit
+Toon wat er veranderd is sinds de laatste commit
 ```
 
 ### Stap 5: Commit de wijziging
 
 ```
-> Commit deze wijziging met een conventional commit message (feat: ...)
+Commit deze wijziging met een conventional commit message (feat: ...)
 ```
 
 ### Stap 6: Bekijk de history
 
 ```
-> Toon de git log
+Toon de git log
 ```
 
 Je zou nu twee commits moeten zien.
@@ -71,14 +71,14 @@ Je zou nu twee commits moeten zien.
 ### Maak een branch
 
 ```
-> Maak een nieuwe branch "feature/about-endpoint", voeg een GET /about
-> endpoint toe, en commit het
+Maak een nieuwe branch "feature/about-endpoint", voeg een GET /about
+endpoint toe, en commit het
 ```
 
 ### Bekijk de diff tussen branches
 
 ```
-> Wat is het verschil tussen de main branch en feature/about-endpoint?
+Wat is het verschil tussen de main branch en feature/about-endpoint?
 ```
 
 ## Verwacht resultaat

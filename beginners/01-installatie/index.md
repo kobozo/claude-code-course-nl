@@ -90,7 +90,7 @@ Volg de instructies op het scherm. Meestal opent er een browservenster waar je k
 Na het inloggen kun je een testbericht sturen:
 
 ```
-> Hallo! Werkt alles goed?
+Hallo! Werkt alles goed?
 ```
 
 Als Claude Code antwoordt, ben je klaar!

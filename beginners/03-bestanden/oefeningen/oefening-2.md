@@ -23,9 +23,9 @@ Leer hoe je Claude Code kunt gebruiken om nieuwe bestanden te genereren op basis
 Vraag Claude Code om een hulpmodule te maken voor de takenlijst-app:
 
 ```
-> Maak een bestand storage.js dat functies exporteert om taken op te slaan
-> en te laden vanuit een JSON bestand. Gebruik het fs module van Node.js.
-> Exporteer twee functies: saveTaken(taken, bestandsnaam) en loadTaken(bestandsnaam)
+Maak een bestand storage.js dat functies exporteert om taken op te slaan
+en te laden vanuit een JSON bestand. Gebruik het fs module van Node.js.
+Exporteer twee functies: saveTaken(taken, bestandsnaam) en loadTaken(bestandsnaam)
 ```
 
 **Controleer**:
@@ -39,15 +39,15 @@ Vraag Claude Code om een hulpmodule te maken voor de takenlijst-app:
 Vraag Claude Code om `app.js` aan te passen zodat het `storage.js` gebruikt:
 
 ```
-> Pas app.js aan zodat het storage.js gebruikt om de taken op te slaan
-> na elke wijziging, en bij het opstarten de taken laadt vanuit het bestand
+Pas app.js aan zodat het storage.js gebruikt om de taken op te slaan
+na elke wijziging, en bij het opstarten de taken laadt vanuit het bestand
 ```
 
 ### Opdracht C: Test het geheel
 
 ```
-> Draai app.js, controleer of taken.json wordt aangemaakt,
-> en draai het daarna nogmaals om te verifiëren dat de taken geladen worden
+Draai app.js, controleer of taken.json wordt aangemaakt,
+en draai het daarna nogmaals om te verifiëren dat de taken geladen worden
 ```
 
 ## Bonus opdrachten
@@ -55,18 +55,18 @@ Vraag Claude Code om `app.js` aan te passen zodat het `storage.js` gebruikt:
 ### Een configuratiebestand
 
 ```
-> Maak een config.js bestand aan met configuratie-opties:
-> - bestandsnaam voor opslag (standaard: "taken.json")
-> - maximaal aantal taken (standaard: 100)
-> Gebruik dit in app.js
+Maak een config.js bestand aan met configuratie-opties:
+- bestandsnaam voor opslag (standaard: "taken.json")
+- maximaal aantal taken (standaard: 100)
+Gebruik dit in app.js
 ```
 
 ### Tests toevoegen
 
 ```
-> Maak een bestand test.js aan dat de functies in app.js test.
-> Test in ieder geval: getTakenToDo, aantalVoltooid en voegTaakToe.
-> Gebruik simpele console.assert statements (geen test framework nodig).
+Maak een bestand test.js aan dat de functies in app.js test.
+Test in ieder geval: getTakenToDo, aantalVoltooid en voegTaakToe.
+Gebruik simpele console.assert statements (geen test framework nodig).
 ```
 
 ## Reflectie

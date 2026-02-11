@@ -24,7 +24,7 @@ Oefen met het stellen van vragen en geven van opdrachten aan Claude Code.
 Vraag Claude Code om uit te leggen wat een `for` loop is in JavaScript.
 
 ```
-> Leg uit wat een for loop is in JavaScript, met een simpel voorbeeld
+Leg uit wat een for loop is in JavaScript, met een simpel voorbeeld
 ```
 
 **Verwacht resultaat**: Je krijgt een uitleg met een codevoorbeeld.
@@ -34,8 +34,8 @@ Vraag Claude Code om uit te leggen wat een `for` loop is in JavaScript.
 Vraag Claude Code om een simpele functie te maken:
 
 ```
-> Maak een JavaScript bestand genaamd greeting.js met een functie
-> die een naam accepteert en "Hallo, [naam]!" returnt
+Maak een JavaScript bestand genaamd greeting.js met een functie
+die een naam accepteert en "Hallo, [naam]!" returnt
 ```
 
 **Verwacht resultaat**: Claude Code maakt het bestand `greeting.js` aan (na jouw toestemming).
@@ -45,7 +45,7 @@ Vraag Claude Code om een simpele functie te maken:
 Als `greeting.js` is aangemaakt:
 
 ```
-> Lees greeting.js en leg uit wat elke regel doet
+Lees greeting.js en leg uit wat elke regel doet
 ```
 
 **Verwacht resultaat**: Een regel-voor-regel uitleg van de code.
@@ -55,8 +55,8 @@ Als `greeting.js` is aangemaakt:
 Vraag om een wijziging:
 
 ```
-> Pas greeting.js aan zodat het ook een optionele begroeting accepteert.
-> Standaard "Hallo", maar je moet ook "Goedemorgen" o.i.d. kunnen meegeven
+Pas greeting.js aan zodat het ook een optionele begroeting accepteert.
+Standaard "Hallo", maar je moet ook "Goedemorgen" o.i.d. kunnen meegeven
 ```
 
 **Verwacht resultaat**: Claude Code past het bestand aan met een extra parameter.
@@ -66,7 +66,7 @@ Vraag om een wijziging:
 Vraag Claude Code om de code uit te voeren:
 
 ```
-> Draai greeting.js met Node.js en test de functie met de naam "Yannick"
+Draai greeting.js met Node.js en test de functie met de naam "Yannick"
 ```
 
 **Verwacht resultaat**: Claude Code voert het bestand uit en toont de output.

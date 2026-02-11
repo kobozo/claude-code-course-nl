@@ -23,7 +23,7 @@ Schrijf een `CLAUDE.md` voor een project en ervaar het verschil dat het maakt.
 Vraag Claude Code eerst om een functie te maken **zonder** CLAUDE.md:
 
 ```
-> Maak een bestand utils.js met een functie die een datum formatteert
+Maak een bestand utils.js met een functie die een datum formatteert
 ```
 
 Let op:
@@ -42,7 +42,7 @@ claude
 ```
 
 ```
-> Maak een CLAUDE.md bestand aan met de volgende inhoud:
+Maak een CLAUDE.md bestand aan met de volgende inhoud:
 
 # Mijn Project
 
@@ -75,7 +75,7 @@ claude
 Vraag nu dezelfde opdracht:
 
 ```
-> Maak een bestand utils.js met een functie die een datum formatteert
+Maak een bestand utils.js met een functie die een datum formatteert
 ```
 
 Vergelijk het resultaat:
@@ -87,7 +87,7 @@ Vergelijk het resultaat:
 ## Opdracht D: Controleer de werking
 
 ```
-> Wat weet je over dit project op basis van de CLAUDE.md?
+Wat weet je over dit project op basis van de CLAUDE.md?
 ```
 
 Claude Code zou een samenvatting moeten geven van de regels en configuratie.
@@ -97,9 +97,9 @@ Claude Code zou een samenvatting moeten geven van de regels en configuratie.
 Voeg extra informatie toe:
 
 ```
-> Voeg aan de CLAUDE.md toe:
-> - Een sectie "Structuur" met: src/ voor broncode, tests/ voor tests
-> - Een sectie "Test conventie" met: testbestanden eindigen op .test.js
+Voeg aan de CLAUDE.md toe:
+- Een sectie "Structuur" met: src/ voor broncode, tests/ voor tests
+- Een sectie "Test conventie" met: testbestanden eindigen op .test.js
 ```
 
 ## Bonus: Globale CLAUDE.md
@@ -107,11 +107,11 @@ Voeg extra informatie toe:
 Maak een globale CLAUDE.md aan die voor al je projecten geldt:
 
 ```
-> Maak het bestand ~/.claude/CLAUDE.md aan met:
-> - Mijn naam is [jouw naam]
-> - Ik werk het liefst met JavaScript/TypeScript
-> - Gebruik altijd Nederlandse uitleg maar Engelse code
-> - Commit messages in het Engels
+Maak het bestand ~/.claude/CLAUDE.md aan met:
+- Mijn naam is [jouw naam]
+- Ik werk het liefst met JavaScript/TypeScript
+- Gebruik altijd Nederlandse uitleg maar Engelse code
+- Commit messages in het Engels
 ```
 
 ## Reflectie

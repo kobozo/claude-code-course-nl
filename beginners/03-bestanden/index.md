@@ -7,15 +7,15 @@ Een van de krachtigste features van Claude Code is dat het direct bestanden in j
 Claude Code kan elk bestand in je project lezen. Je hoeft alleen te verwijzen naar het bestand:
 
 ```
-> Lees het bestand src/index.js
+Lees het bestand src/index.js
 ```
 
 ```
-> Wat staat er in package.json?
+Wat staat er in package.json?
 ```
 
 ```
-> Bekijk de eerste 20 regels van app.js
+Bekijk de eerste 20 regels van app.js
 ```
 
 Claude Code gebruikt hier de **Read tool** voor. Het toont de inhoud en kan er vragen over beantwoorden.
@@ -31,8 +31,8 @@ Claude Code gebruikt hier de **Read tool** voor. Het toont de inhoud en kan er v
 Je kunt Claude Code vragen om nieuwe bestanden te maken:
 
 ```
-> Maak een bestand config.js aan met de volgende database configuratie:
-> host: localhost, port: 5432, database: myapp
+Maak een bestand config.js aan met de volgende database configuratie:
+host: localhost, port: 5432, database: myapp
 ```
 
 Claude Code:
@@ -45,15 +45,15 @@ Claude Code:
 Claude Code kan bestaande bestanden aanpassen:
 
 ```
-> Voeg een nieuwe functie toe aan utils.js die een array sorteert op naam
+Voeg een nieuwe functie toe aan utils.js die een array sorteert op naam
 ```
 
 ```
-> Verwijder de console.log statements uit server.js
+Verwijder de console.log statements uit server.js
 ```
 
 ```
-> Hernoem de variabele 'x' naar 'userName' in auth.js
+Hernoem de variabele 'x' naar 'userName' in auth.js
 ```
 
 Bij het bewerken gebruikt Claude Code de **Edit tool**. Het zoekt de exacte tekst die vervangen moet worden en past alleen dat deel aan. De rest van je bestand blijft onaangetast.
@@ -63,13 +63,13 @@ Bij het bewerken gebruikt Claude Code de **Edit tool**. Het zoekt de exacte teks
 Claude Code kan meerdere bestanden in een keer aanpassen:
 
 ```
-> Hernoem de functie 'getData' naar 'fetchUserData' in alle bestanden
-> waar die wordt gebruikt
+Hernoem de functie 'getData' naar 'fetchUserData' in alle bestanden
+waar die wordt gebruikt
 ```
 
 ```
-> Maak een components/ map aan met drie bestanden:
-> Header.js, Footer.js en Sidebar.js, elk met een basis React component
+Maak een components/ map aan met drie bestanden:
+Header.js, Footer.js en Sidebar.js, elk met een basis React component
 ```
 
 ## Hoe Claude Code bestanden vindt
@@ -77,11 +77,11 @@ Claude Code kan meerdere bestanden in een keer aanpassen:
 Claude Code kan door je hele project zoeken:
 
 ```
-> Zoek alle bestanden die de functie 'calculatePrice' gebruiken
+Zoek alle bestanden die de functie 'calculatePrice' gebruiken
 ```
 
 ```
-> In welk bestand staat de database connectie?
+In welk bestand staat de database connectie?
 ```
 
 Het gebruikt hiervoor tools als **Glob** (bestanden zoeken op naam) en **Grep** (zoeken in bestandsinhoud).

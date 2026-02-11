@@ -25,7 +25,7 @@ De "memory" MCP server geeft Claude Code een persistent geheugen dat tussen sess
 Vraag Claude Code:
 
 ```
-> Maak een .mcp.json bestand aan met de memory MCP server van modelcontextprotocol
+Maak een .mcp.json bestand aan met de memory MCP server van modelcontextprotocol
 ```
 
 ### Stap 2: Herstart Claude Code
@@ -40,7 +40,7 @@ claude
 ### Stap 3: Test de server
 
 ```
-> Welke MCP servers zijn beschikbaar?
+Welke MCP servers zijn beschikbaar?
 ```
 
 Claude Code zou de memory server moeten tonen.
@@ -50,8 +50,8 @@ Claude Code zou de memory server moeten tonen.
 ### Stap 1: Configureer
 
 ```
-> Voeg aan de .mcp.json de filesystem MCP server toe met toegang tot
-> mijn Desktop map
+Voeg aan de .mcp.json de filesystem MCP server toe met toegang tot
+mijn Desktop map
 ```
 
 ### Stap 2: Herstart en test
@@ -62,13 +62,13 @@ claude
 ```
 
 ```
-> Welke bestanden staan er op mijn Desktop?
+Welke bestanden staan er op mijn Desktop?
 ```
 
 ## Opdracht C: Bekijk de configuratie
 
 ```
-> Toon de inhoud van .mcp.json
+Toon de inhoud van .mcp.json
 ```
 
 Je zou iets als dit moeten zien:
@@ -97,7 +97,7 @@ Je zou iets als dit moeten zien:
 Omdat `.mcp.json` in de toekomst API keys kan bevatten:
 
 ```
-> Voeg .mcp.json toe aan de .gitignore
+Voeg .mcp.json toe aan de .gitignore
 ```
 
 ## Reflectie

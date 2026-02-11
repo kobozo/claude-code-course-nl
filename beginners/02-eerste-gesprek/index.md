@@ -43,46 +43,46 @@ De kwaliteit van je prompts bepaalt de kwaliteit van de output. Hier zijn de bel
 
 ```
 # Vaag (minder goed)
-> Maak een functie
+Maak een functie
 
 # Specifiek (beter)
-> Maak een JavaScript functie genaamd `validateEmail` die een string
-> accepteert en true/false returnt op basis van een simpele e-mail validatie
+Maak een JavaScript functie genaamd `validateEmail` die een string
+accepteert en true/false returnt op basis van een simpele e-mail validatie
 ```
 
 ### 2. Geef context
 
 ```
 # Zonder context (minder goed)
-> Fix de bug
+Fix de bug
 
 # Met context (beter)
-> In src/utils.js geeft de functie `calculateTotal` een verkeerd
-> resultaat wanneer de korting 0% is. Kun je de bug vinden en fixen?
+In src/utils.js geeft de functie `calculateTotal` een verkeerd
+resultaat wanneer de korting 0% is. Kun je de bug vinden en fixen?
 ```
 
 ### 3. Geef het gewenste resultaat aan
 
 ```
 # Open (minder goed)
-> Doe iets met dit bestand
+Doe iets met dit bestand
 
 # Duidelijk resultaat (beter)
-> Voeg error handling toe aan de `fetchData` functie in api.js.
-> Gebruik een try/catch block en log errors naar de console.
+Voeg error handling toe aan de `fetchData` functie in api.js.
+Gebruik een try/catch block en log errors naar de console.
 ```
 
 ### 4. Splits grote taken op
 
 In plaats van:
 ```
-> Bouw een complete webshop met authenticatie, producten, winkelwagen en betaling
+Bouw een complete webshop met authenticatie, producten, winkelwagen en betaling
 ```
 
 Splits het op:
 ```
-> Maak een basis Express server aan met een GET /products endpoint
-> die een hardcoded lijst van producten returnt als JSON
+Maak een basis Express server aan met een GET /products endpoint
+die een hardcoded lijst van producten returnt als JSON
 ```
 
 ## Hoe Claude Code antwoordt

@@ -95,7 +95,7 @@ Met de GitHub MCP server kan Claude Code direct met GitHub werken:
 Je kunt ook Claude Code zelf vragen om een MCP server te configureren:
 
 ```
-> Voeg de filesystem MCP server toe die toegang geeft tot ~/Documents
+Voeg de filesystem MCP server toe die toegang geeft tot ~/Documents
 ```
 
 Of via het slash-commando:

@@ -96,11 +96,11 @@ Na veel heen-en-weer gaat Claude Code context verliezen. Gebruik `/compact` om h
 
 ```
 # Minder goed
-> Fix de bug
+Fix de bug
 
 # Beter
-> In src/auth/login.ts op regel 45 wordt de error niet goed afgehandeld.
-> Voeg een try/catch block toe.
+In src/auth/login.ts op regel 45 wordt de error niet goed afgehandeld.
+Voeg een try/catch block toe.
 ```
 
 ### 4. Gebruik meerdere sessies
@@ -112,21 +112,21 @@ Je kunt meerdere Claude Code sessies tegelijk draaien in verschillende terminals
 Vraag niet alleen om code, maar ook om uitleg:
 
 ```
-> Leg uit waarom je deze aanpak hebt gekozen in plaats van een alternatief
+Leg uit waarom je deze aanpak hebt gekozen in plaats van een alternatief
 ```
 
 ### 6. Gebruik het voor leren
 
 ```
-> Ik ben nieuw met React. Leg stap voor stap uit hoe deze component werkt
-> en welke patronen er gebruikt worden
+Ik ben nieuw met React. Leg stap voor stap uit hoe deze component werkt
+en welke patronen er gebruikt worden
 ```
 
 ### 7. Review je code samen
 
 ```
-> Bekijk src/api/routes.ts en geef feedback op de code kwaliteit.
-> Zijn er verbeterpunten?
+Bekijk src/api/routes.ts en geef feedback op de code kwaliteit.
+Zijn er verbeterpunten?
 ```
 
 ## Kosten in de gaten houden

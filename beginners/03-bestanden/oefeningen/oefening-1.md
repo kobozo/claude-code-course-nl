@@ -37,7 +37,7 @@ Leer hoe je Claude Code kunt gebruiken om bugs te vinden en te fixen in een best
 ### Stap 1: Laat Claude Code het bestand lezen
 
 ```
-> Lees app.js en vertel me welke bugs je ziet
+Lees app.js en vertel me welke bugs je ziet
 ```
 
 Bekijk of Claude Code alle 4 de bugs vindt.
@@ -45,7 +45,7 @@ Bekijk of Claude Code alle 4 de bugs vindt.
 ### Stap 2: Fix de bugs een voor een
 
 ```
-> Fix bug 1: de functie getTakenToDo filtert verkeerd
+Fix bug 1: de functie getTakenToDo filtert verkeerd
 ```
 
 Controleer de wijziging en accepteer als het klopt.
@@ -53,13 +53,13 @@ Controleer de wijziging en accepteer als het klopt.
 ### Stap 3: Of fix alles in een keer
 
 ```
-> Fix alle bugs in app.js
+Fix alle bugs in app.js
 ```
 
 ### Stap 4: Test het resultaat
 
 ```
-> Draai app.js met Node.js om te controleren of alle bugs gefixt zijn
+Draai app.js met Node.js om te controleren of alle bugs gefixt zijn
 ```
 
 ## Verwacht resultaat na de fixes
