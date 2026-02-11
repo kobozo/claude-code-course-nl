@@ -2,72 +2,69 @@
 
 In deze module installeer je alles wat je nodig hebt om met Claude Code te werken.
 
-## Stap 1: Node.js installeren
+## Stap 1: Claude Code installeren
 
-Claude Code vereist **Node.js versie 18 of hoger**.
+De snelste manier om Claude Code te installeren is via de **native installer**. Dit is de aanbevolen methode — je hebt geen Node.js nodig en updates worden automatisch geinstalleerd.
 
-### Controleer of Node.js al geinstalleerd is
+### macOS / Linux / WSL (aanbevolen)
 
-Open je terminal en typ:
-
-```bash
-node --version
-```
-
-Als je een versienummer ziet dat begint met `v18` of hoger (bijv. `v20.11.0`), kun je doorgaan naar stap 2.
-
-### Node.js installeren
-
-#### macOS
-
-De makkelijkste manier is via de officiele website:
-
-1. Ga naar [nodejs.org](https://nodejs.org)
-2. Download de **LTS** versie (aanbevolen)
-3. Open het gedownloade bestand en volg de installatie
-
-Of via Homebrew:
+Open je terminal en plak:
 
 ```bash
-brew install node
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-#### Linux (Ubuntu/Debian)
+### Windows (PowerShell)
 
-```bash
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs
+```powershell
+irm https://claude.ai/install.ps1 | iex
 ```
 
-#### Windows
+### Windows (CMD)
 
-1. Installeer eerst [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) als je dat nog niet hebt
-2. Volg daarna de Linux-instructies hierboven in je WSL terminal
+```batch
+curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+```
 
 ### Verifieer de installatie
-
-```bash
-node --version   # Moet v18+ tonen
-npm --version    # Moet meegeinstalleerd zijn
-```
-
-## Stap 2: Claude Code installeren
-
-Installeer Claude Code globaal via npm:
-
-```bash
-npm install -g @anthropic-ai/claude-code
-```
-
-Verifieer dat het werkt:
 
 ```bash
 claude --version
 ```
 
-> **Tip**: Als je een "permission denied" foutmelding krijgt, probeer dan `sudo npm install -g @anthropic-ai/claude-code` (macOS/Linux).
+> **Voordeel van native install**: Claude Code werkt automatisch bij op de achtergrond. Je hebt altijd de nieuwste versie zonder dat je iets hoeft te doen.
 
-## Stap 3: Authenticatie
+## Alternatieve installatiemethoden
+
+Als de native installer niet werkt, zijn er alternatieven:
+
+### Homebrew (macOS)
+
+```bash
+brew install --cask claude-code
+```
+
+> **Let op**: Homebrew updatet niet automatisch. Draai regelmatig `brew upgrade claude-code` voor de nieuwste versie.
+
+### WinGet (Windows)
+
+```powershell
+winget install Anthropic.ClaudeCode
+```
+
+> **Let op**: WinGet updatet niet automatisch. Draai regelmatig `winget upgrade Anthropic.ClaudeCode` voor de nieuwste versie.
+
+### npm (legacy)
+
+Als je al Node.js v18+ hebt, kun je ook via npm installeren:
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+> **Let op**: npm updatet niet automatisch. Draai regelmatig `npm update -g @anthropic-ai/claude-code` voor de nieuwste versie.
+
+## Stap 2: Authenticatie
 
 De eerste keer dat je Claude Code start, moet je inloggen.
 
@@ -102,33 +99,12 @@ Als Claude Code antwoordt, ben je klaar!
 
 ### "command not found: claude"
 
-Node.js global packages staan niet in je PATH. Probeer:
+Start een **nieuwe terminal** na de installatie. Het `claude` commando is pas beschikbaar in nieuwe terminal-sessies.
+
+Als het dan nog niet werkt, controleer of het installatiescript goed is afgerond. Draai het script nogmaals:
 
 ```bash
-# Bekijk waar npm global packages installeert
-npm config get prefix
-
-# Voeg dit toe aan je PATH in ~/.zshrc of ~/.bashrc
-export PATH="$(npm config get prefix)/bin:$PATH"
-```
-
-Start daarna een nieuwe terminal.
-
-### "EACCES: permission denied"
-
-npm heeft geen schrijfrechten. Oplossing:
-
-```bash
-sudo npm install -g @anthropic-ai/claude-code
-```
-
-Of configureer npm om een andere map te gebruiken:
-
-```bash
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
-# Voeg toe aan ~/.zshrc of ~/.bashrc:
-export PATH=~/.npm-global/bin:$PATH
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 ### Authenticatie lukt niet
@@ -137,12 +113,20 @@ export PATH=~/.npm-global/bin:$PATH
 - Probeer opnieuw in te loggen: typ `claude` en volg de stappen
 - Controleer je internetverbinding
 
+### Installatie op Windows zonder WSL
+
+Claude Code werkt het beste met WSL (Windows Subsystem for Linux). Als je WSL nog niet hebt:
+
+1. Open PowerShell als administrator
+2. Draai: `wsl --install`
+3. Herstart je computer
+4. Open de WSL terminal en volg de macOS/Linux installatie-instructies
+
 ## Samenvatting
 
 Na deze module heb je:
 
-- [x] Node.js v18+ geinstalleerd
-- [x] Claude Code geinstalleerd via npm
+- [x] Claude Code geinstalleerd (bij voorkeur via native installer)
 - [x] Succesvol ingelogd
 - [x] Een testbericht gestuurd
 

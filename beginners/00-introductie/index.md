@@ -55,8 +55,7 @@ Terminal (jij) → Claude Code (CLI) → Claude AI (Anthropic API) → Antwoord 
 Voordat je begint, zorg dat je het volgende hebt:
 
 - **Terminal basiskennis**: je kunt navigeren met `cd`, bestanden bekijken met `ls`, en weet wat een map (directory) is
-- **Een computer** met macOS, Linux, of Windows met WSL
-- **Node.js** versie 18 of hoger (installatie in de volgende module)
+- **Een computer** met macOS, Linux, of Windows (WSL aanbevolen)
 - **Een Anthropic account** voor authenticatie
 
 > **Geen programmeerervaring nodig!** Je kunt Claude Code ook gebruiken om te leren programmeren. Wel is basiskennis van de terminal vereist.

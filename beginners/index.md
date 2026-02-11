@@ -22,7 +22,7 @@ Deze training is bedoeld voor developers die:
 | # | Module | Onderwerp |
 |---|--------|-----------|
 | 00 | [Introductie](./00-introductie/index.md) | Wat is Claude Code en waarom zou je het gebruiken? |
-| 01 | [Installatie](./01-installatie/index.md) | Node.js, Claude Code installeren en authenticatie |
+| 01 | [Installatie](./01-installatie/index.md) | Claude Code installeren en authenticatie |
 | 02 | [Eerste Gesprek](./02-eerste-gesprek/index.md) | Basis commando's en effectief prompts schrijven |
 | 03 | [Bestanden](./03-bestanden/index.md) | Bestanden lezen, maken en bewerken met Claude Code |
 | 04 | [Git Workflow](./04-git-workflow/index.md) | Git gebruiken via Claude Code |
